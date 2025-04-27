@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import loadable from '@loadable/component';
+import { BrowserRouter } from 'react-router-dom';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import './i18n';
@@ -16,7 +17,9 @@ const StartApp = loadable(() => import('./start'), {
 });
 
 ReactDOM.render(
-  <StartApp />,
+  <BrowserRouter basename="/UPDATEDURDUVIRU"> {/* 👈 Wrap here */}
+    <StartApp />
+  </BrowserRouter>,
   document.getElementById('root'),
 );
 
